@@ -2,6 +2,7 @@
 
 import 'package:get/get.dart';
 
+////  GetxController use for short time memory
 class Controllerhome extends GetxController {
   var counte = 0.obs;
 
@@ -37,4 +38,9 @@ class Controllerhome extends GetxController {
     print('disposed called ');
     super.onClose();
   }
+}
+
+////  GetxController use for Long time memory
+class LoginPage extends GetxService {
+  loginFunc() {}
 }
