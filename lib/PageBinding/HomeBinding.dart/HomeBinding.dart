@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:getx_prectise/PageBinding/page1/HomeView.dart';
 
 class MainHomeView extends StatelessWidget {
   const MainHomeView({super.key});
@@ -12,7 +10,7 @@ class MainHomeView extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Get.to(PageView1());
+            Get.toNamed('/page1');
           },
           child: Text('Navigate to Page 1'),
         ),

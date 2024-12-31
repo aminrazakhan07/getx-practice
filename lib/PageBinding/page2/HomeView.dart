@@ -14,13 +14,20 @@ class PageView2 extends StatelessWidget {
         backgroundColor: Colors.amber,
         title: Text('Page 2'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Get.back();
-          },
-          child: Text('Back'),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Page two'),
+          SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Get.back();
+              },
+              child: Text('Back'),
+            ),
+          ),
+        ],
       ),
     );
   }

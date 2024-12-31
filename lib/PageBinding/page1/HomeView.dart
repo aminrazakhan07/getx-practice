@@ -14,13 +14,20 @@ class PageView1 extends StatelessWidget {
         backgroundColor: Colors.amber,
         title: Text(Get.find<Page1Controller>().pageName),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Get.to(PageView2());
-          },
-          child: Text('Navigate to Page 2'),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text('Page one'),
+          SizedBox(height: 20),
+          Center(
+            child: ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/page2');
+              },
+              child: Text('Navigate to Page 2'),
+            ),
+          ),
+        ],
       ),
     );
   }

@@ -1,22 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
+import 'package:getx_prectise/PageBinding/page2/conrtoller.dart';
 
-class HomeViews extends StatelessWidget {
-  const HomeViews({super.key});
-
+class Page2Binding extends Bindings {
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Get.to(PageView());
-          },
-          child: Text('Navigate to Page1'),
-        ),
-      ),
-    );
+  void dependencies() {
+    Get.lazyPut(() => Page2Controller());
   }
 }
