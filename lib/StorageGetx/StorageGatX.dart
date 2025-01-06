@@ -34,31 +34,27 @@ class _StorageGatXState extends State<StorageGatX> {
               'Email or Phone no ',
               style: TextStyle(color: Colors.grey[700]),
             ),
-            //
-            // TextField(
-            //   controller: emailController,
-            // ),
+
             /////
             Container(
               margin: EdgeInsets.only(left: 25, right: 25),
               child: Theme(
                 data: ThemeData(
-                  hintColor: Colors.transparent, // تھیم کا اثر ختم کرنے کے لیے
+                  hintColor: Colors.transparent,
                 ),
                 child: TextField(
                   controller: emailController,
                   decoration: InputDecoration(
                     labelText: 'User Name',
                     labelStyle: TextStyle(color: Colors.cyan),
-                    hintText: 'Enter Name...', // ہنٹ ٹیکسٹ
+                    hintText: 'Enter Name...',
                     hintStyle: TextStyle(
-                      color: Colors.grey[600], // ہنٹ کا رنگ
-                      fontSize: 16, // ٹیکسٹ کا سائز
+                      color: Colors.grey[600],
+                      fontSize: 16,
                     ),
-                    prefixIcon:
-                        Icon(Icons.person, color: Colors.green), // آئیکن
-                    filled: true, // بھرے رنگ کے لیے
-                    fillColor: Colors.white, // بھرے رنگ کی وضاحت
+                    prefixIcon: Icon(Icons.person, color: Colors.green),
+                    filled: true,
+                    fillColor: Colors.white,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(25),
                       borderSide: BorderSide(color: Colors.green, width: 2.0),
@@ -71,8 +67,8 @@ class _StorageGatXState extends State<StorageGatX> {
                       borderRadius: BorderRadius.circular(25),
                       borderSide: BorderSide(color: Colors.green, width: 2.0),
                     ),
-                    contentPadding: EdgeInsets.symmetric(
-                        vertical: 15, horizontal: 12), // زیادہ جگہ
+                    contentPadding:
+                        EdgeInsets.symmetric(vertical: 15, horizontal: 12),
                   ),
                   autofocus: true,
                   autocorrect: true,
@@ -89,14 +85,14 @@ class _StorageGatXState extends State<StorageGatX> {
 
                   //
                   Get.snackbar(
-                    'Saved email',
+                    '-',
                     'Successful',
                     colorText: Colors.white,
                     snackPosition: SnackPosition.BOTTOM,
-                    // titleText: Text(
-                    //   'Get X',
-                    //   style: TextStyle(color: Colors.yellow),
-                    // ),
+                    titleText: Text(
+                      'Saved',
+                      style: TextStyle(color: Colors.yellow),
+                    ),
 
                     duration: Duration(seconds: 3),
 
@@ -135,17 +131,18 @@ class _StorageGatXState extends State<StorageGatX> {
                   );
                 } else {
                   Get.snackbar(
-                    'incorrect email',
+                    '-',
                     'Enter correct email',
+                    colorText: Colors.black,
 
                     snackPosition: SnackPosition.BOTTOM,
-                    // titleText: Text(
-                    //   'Get X',
-                    //   style: TextStyle(color: Colors.yellow),
-                    // ),
+                    titleText: Text(
+                      'Incorrect email',
+                      style: TextStyle(color: Colors.red),
+                    ),
 
                     duration: Duration(seconds: 3),
-                    colorText: Colors.red,
+
                     backgroundColor: Colors.white,
                     instantInit: true,
                     icon: Icon(Icons.ac_unit_outlined),
