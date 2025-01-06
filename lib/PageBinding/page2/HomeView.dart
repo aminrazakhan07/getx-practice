@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
 class PageView2 extends StatelessWidget {
-  PageView2({super.key});
+  const PageView2({super.key});
 
   // var a = Get.put(PageController());
 

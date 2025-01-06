@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:getx_prectise/PageBinding/page1/controller.dart';
-import 'package:getx_prectise/PageBinding/page2/HomeView.dart';
 
 class PageView1 extends StatelessWidget {
   const PageView1({super.key});

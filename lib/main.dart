@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:getx_prectise/Counter/HomeCounting.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:getx_prectise/PageBinding/HomeBinding.dart/HomeBinding.dart';
-import 'package:getx_prectise/PageBinding/allBinding.dart';
 import 'package:getx_prectise/PageBinding/page1/HomeView.dart';
 import 'package:getx_prectise/PageBinding/page1/binding.dart';
 import 'package:getx_prectise/PageBinding/page2/HomeView.dart';
 import 'package:getx_prectise/PageBinding/page2/binding.dart';
+import 'package:getx_prectise/StorageGetx/StorageGatX.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
+
   runApp(const MyApp());
 }
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       debugShowCheckedModeBanner: false,
-      home: MainHomeView(),
+      home: StorageGatX(),
     );
   }
 }

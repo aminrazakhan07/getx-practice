@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:getx_prectise/PageBinding/page1/controller.dart';
 import 'package:getx_prectise/PageBinding/page2/conrtoller.dart';
