@@ -46,7 +46,7 @@ class _StorageGatXState extends State<StorageGatX> {
                   decoration: InputDecoration(
                     labelText: 'User Name',
                     labelStyle: TextStyle(color: Colors.cyan),
-                    hintText: 'Enter Name...',
+                    hintText: 'email or phone no',
                     hintStyle: TextStyle(
                       color: Colors.grey[600],
                       fontSize: 16,
