@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get_storage/get_storage.dart';
 
 class StorageGatX extends StatefulWidget {
@@ -86,7 +85,7 @@ class _StorageGatXState extends State<StorageGatX> {
                   //
                   Get.snackbar(
                     '-',
-                    'Successful',
+                    "Successful \n${emailController.text} ",
                     colorText: Colors.white,
                     snackPosition: SnackPosition.BOTTOM,
                     titleText: Text(
@@ -98,7 +97,7 @@ class _StorageGatXState extends State<StorageGatX> {
 
                     backgroundColor: Colors.green,
                     instantInit: true,
-                    icon: Icon(Icons.ac_unit_outlined),
+                    icon: Icon(Icons.storage_rounded),
                     borderRadius: 8,
                     borderColor: Colors.white,
                     margin: EdgeInsets.all(20),
