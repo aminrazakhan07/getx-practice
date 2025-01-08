@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_prectise/Medical%20App/Auth/SignUpView.dart';
+import 'package:getx_prectise/Medical%20App/Onboadring/homeBoard.dart';
 import 'package:getx_prectise/PageBinding/page1/HomeView.dart';
 import 'package:getx_prectise/PageBinding/page1/binding.dart';
 import 'package:getx_prectise/PageBinding/page2/HomeView.dart';
 import 'package:getx_prectise/PageBinding/page2/binding.dart';
-import 'package:getx_prectise/StorageGetx/StorageGatX.dart';
 
 void main() async {
   await GetStorage.init();
@@ -38,7 +37,7 @@ class MyApp extends StatelessWidget {
         ),
       ],
       debugShowCheckedModeBanner: false,
-      home: SignUpScreen(),
+      home: Onboardring(),
     );
   }
 }
