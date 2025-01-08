@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:getx_prectise/CustomText/TextField.dart';
 
 class StorageGatX extends StatefulWidget {
   const StorageGatX({super.key});
@@ -13,7 +14,7 @@ class StorageGatX extends StatefulWidget {
 
 class _StorageGatXState extends State<StorageGatX> {
   //
-  TextEditingController emailController = TextEditingController();
+  TextEditingController textEditinh = TextEditingController();
 
   ///
   var box = GetStorage();
@@ -35,57 +36,23 @@ class _StorageGatXState extends State<StorageGatX> {
             ),
 
             /////
-            Container(
-              margin: EdgeInsets.only(left: 25, right: 25),
-              child: Theme(
-                data: ThemeData(
-                  hintColor: Colors.transparent,
-                ),
-                child: TextField(
-                  controller: emailController,
-                  decoration: InputDecoration(
-                    labelText: 'User Name',
-                    labelStyle: TextStyle(color: Colors.cyan),
-                    hintText: 'email or phone no',
-                    hintStyle: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 16,
-                    ),
-                    prefixIcon: Icon(Icons.person, color: Colors.green),
-                    filled: true,
-                    fillColor: Colors.white,
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.green, width: 2.0),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.cyan, width: 2.0),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.green, width: 2.0),
-                    ),
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 15, horizontal: 12),
-                  ),
-                  autofocus: true,
-                  autocorrect: true,
-                ),
-              ),
+            CustomTextField(
+              texController: textEditinh,
+              lblText: 'User Name',
+              prefix: Icons.person,
             ),
 
             ///
             ElevatedButton(
               onPressed: () {
                 //
-                if (GetUtils.isEmail(emailController.text)) {
-                  box.write('name', emailController.text);
+                if (GetUtils.isEmail(textEditinh.text)) {
+                  box.write('name', textEditinh.text);
 
                   //
                   Get.snackbar(
                     '-',
-                    "Successful \n${emailController.text} ",
+                    "Successful \n${textEditinh.text} ",
                     colorText: Colors.white,
                     snackPosition: SnackPosition.BOTTOM,
                     titleText: Text(
@@ -145,7 +112,7 @@ class _StorageGatXState extends State<StorageGatX> {
                     backgroundColor: Colors.white,
                     instantInit: true,
                     icon: Icon(Icons.ac_unit_outlined),
-                    borderRadius: 8,
+                    borderRadius: 4,
                     borderColor: Colors.red,
                     margin: EdgeInsets.all(20),
                     borderWidth: 3,
