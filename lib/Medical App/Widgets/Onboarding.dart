@@ -13,6 +13,7 @@ class CusOnboarding extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Image.asset(image),
+        SizedBox(height: 10),
         Text(
           content,
           textAlign: TextAlign.center,
