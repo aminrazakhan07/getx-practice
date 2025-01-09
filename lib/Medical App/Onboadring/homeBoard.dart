@@ -46,14 +46,27 @@ class _OnboardringState extends State<Onboardring> {
           pageIndecator(currentPage),
         ],
       ),
-      bottomNavigationBar: Container(
-        height: 50,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(25),
-            topRight: Radius.circular(25),
+      bottomNavigationBar: InkWell(
+        onTap: () {
+          print('GEt Started');
+        },
+        child: Container(
+          alignment: Alignment.center,
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25),
+              topRight: Radius.circular(25),
+            ),
+          ),
+          child: Text(
+            'Get Started',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
       ),
