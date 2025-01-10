@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:getx_prectise/CustomText/TextField.dart';
+import 'package:getx_prectise/Medical%20App/Auth/SignUpView.dart';
+import 'package:getx_prectise/Medical%20App/Auth/forgetPassword.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/alreadyHaveAcc.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/isDoctor.dart';
-
-import '../Widgets/CustomButton.dart';
 
 class LoginviewPage extends StatelessWidget {
   const LoginviewPage({super.key});
@@ -14,6 +13,10 @@ class LoginviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Login Page'),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -53,9 +56,12 @@ class LoginviewPage extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: InkWell(
                   onTap: () {
-                    CustomSnackbar(
-                      title: 'q',
-                      message: 'Succe',
+                    Get.to(ForgetpasswordScr());
+                    ////
+                    Get.snackbar(
+                      'Forget Password',
+                      'Successfully',
+                      snackPosition: SnackPosition.BOTTOM,
                     );
                   },
                   child: Text(
@@ -68,17 +74,28 @@ class LoginviewPage extends StatelessWidget {
             ////
             CustomButton(
               onTap: () {
-                CustomSnackbar(
-                  title: 'q',
-                  message: 'Succe',
+                ///
+                Get.snackbar(
+                  'Log in',
+                  'Successfully',
+                  snackPosition: SnackPosition.BOTTOM,
                 );
               },
-              lbl: 'Login',
+              lbl: 'Login ',
             ),
             ////
             AlreadyAccountCheck(
               comment: "Don't have account?",
               goToPage: ' Sign Up',
+              onTap: () {
+                //
+
+                Get.offAll(SignUpScreen());
+
+                ///
+                Get.snackbar('Log in Page', 'Successfully',
+                    snackPosition: SnackPosition.BOTTOM);
+              },
             ),
             ////
           ],

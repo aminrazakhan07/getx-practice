@@ -41,10 +41,10 @@ class CustomSnackbar extends StatelessWidget {
   final String message;
 
   const CustomSnackbar({
-    Key? key,
+    super.key,
     required this.title,
     required this.message,
-  }) : super(key: key);
+  });
 
   void showSnackbar() {
     Get.snackbar(

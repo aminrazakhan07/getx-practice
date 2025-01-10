@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class AlreadyAccountCheck extends StatelessWidget {
   final comment;
   final goToPage;
+  final VoidCallback onTap;
   const AlreadyAccountCheck(
       {super.key,
       this.comment = 'Already have an account?',
-      this.goToPage = ' Login'});
+      this.goToPage = ' Login',
+      required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +16,8 @@ class AlreadyAccountCheck extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(comment),
-        InkWell(
-          onTap: () {
-            Get.snackbar('Go to Sign Up', 'Successfully',
-                snackPosition: SnackPosition.BOTTOM);
-          },
+        TextButton(
+          onPressed: onTap,
           child: Text(
             goToPage,
             style: TextStyle(

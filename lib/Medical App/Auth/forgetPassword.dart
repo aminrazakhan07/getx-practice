@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:get/instance_manager.dart';
 import 'package:getx_prectise/CustomText/TextField.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
 
