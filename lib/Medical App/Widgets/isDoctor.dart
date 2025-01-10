@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class IsDoctor extends StatefulWidget {
-  const IsDoctor({super.key});
+  final String doctor;
+  const IsDoctor({super.key, this.doctor = 'Bocome a Doctor'});
 
   @override
   State<IsDoctor> createState() => _IsDoctorState();
@@ -14,7 +15,7 @@ class _IsDoctorState extends State<IsDoctor> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text('Become a Doctor'),
+        Text(widget.doctor),
         Switch(
             activeColor: Colors.blue,
             value: IsDoctor,

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:getx_prectise/CustomText/TextField.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
+import 'package:getx_prectise/Medical%20App/Widgets/alreadyHaveAcc.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/isDoctor.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -45,20 +46,11 @@ class SignUpScreen extends StatelessWidget {
               obscurs: true,
               prefix: Icons.visibility_off,
             ),
-            CustomButton(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Already have an account?'),
-                Text(
-                  ' Login',
-                  style: TextStyle(
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                  ),
-                )
-              ],
-            )
+            CustomButton(
+              onTap: () {},
+            ),
+            //
+            AlreadyAccountCheck()
           ],
         ),
       ),

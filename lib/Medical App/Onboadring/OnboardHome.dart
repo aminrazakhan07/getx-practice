@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:getx_prectise/Medical%20App/Auth/Loginview.dart';
+import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/Indecator.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/Onboarding.dart';
 
@@ -46,29 +49,11 @@ class _OnboardringState extends State<Onboardring> {
           pageIndecator(currentPage),
         ],
       ),
-      bottomNavigationBar: InkWell(
+      bottomNavigationBar: CustomButton(
+        lbl: 'Get Started',
         onTap: () {
-          print('GEt Started');
+          Get.offAll(LoginviewPage());
         },
-        child: Container(
-          alignment: Alignment.center,
-          height: 50,
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.blue,
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(25),
-              topRight: Radius.circular(25),
-            ),
-          ),
-          child: Text(
-            'Get Started',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
       ),
     );
   }

@@ -1,27 +1,69 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final String lbl;
+  final VoidCallback onTap;
+  const CustomButton({
+    super.key,
+    this.lbl = 'Sign Up',
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 25, right: 25, top: 15, bottom: 50),
-      child: Container(
-        margin: EdgeInsets.only(top: 15),
-        alignment: Alignment.center,
-        height: 50,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Colors.blue,
-          borderRadius: BorderRadius.circular(25),
-          //
-        ),
-        child: Text(
-          'Sign Up',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+      padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          alignment: Alignment.center,
+          height: 50,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Text(
+            lbl,
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
         ),
       ),
     );
+  }
+}
+
+////
+
+class CustomSnackbar extends StatelessWidget {
+  final String title;
+  final String message;
+
+  const CustomSnackbar({
+    Key? key,
+    required this.title,
+    required this.message,
+  }) : super(key: key);
+
+  void showSnackbar() {
+    Get.snackbar(
+      title,
+      message,
+      snackPosition: SnackPosition.BOTTOM,
+      // duration: Duration(seconds: 2),
+      // backgroundColor: Colors.green,
+      // colorText: Colors.white,
+      // margin: EdgeInsets.all(10),
+      // borderRadius: 10,
+      // isDismissible: true,
+      // dismissDirection: DismissDirection.horizontal,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }
