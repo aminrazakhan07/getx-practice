@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:getx_prectise/CustomText/TextField.dart';
 import 'package:getx_prectise/Medical%20App/Auth/LoginView.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
+import 'package:getx_prectise/Medical%20App/Widgets/SnackBart.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/alreadyHaveAcc.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/isDoctor.dart';
 
@@ -15,6 +16,10 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text('Sign Up'),
+      ),
       body: Center(
         child: Column(
           children: [
@@ -49,17 +54,23 @@ class SignUpScreen extends StatelessWidget {
               prefix: Icons.visibility_off,
             ),
             CustomButton(
-              onTap: () {},
+              onTap: () {
+                SnackbarHelper.showSnackbar(
+                  title: 'Sign Up',
+                  message: 'Successfully',
+                );
+              },
+              lbl: 'Sing Up',
             ),
             //
             AlreadyAccountCheck(
               onTap: () {
                 Get.offAll(const LoginviewPage());
                 //
-                Get.snackbar(
-                  'Sing Up Page',
-                  'Successfully',
-                  snackPosition: SnackPosition.BOTTOM,
+                SnackbarHelper.showSnackbar(
+                  title: 'Login Page',
+                  message: 'Successfully',
+                  position: SnackPosition.BOTTOM,
                 );
               },
             )

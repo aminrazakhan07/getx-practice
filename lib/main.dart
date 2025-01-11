@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:getx_prectise/Medical%20App/Auth/Loginview.dart';
 import 'package:getx_prectise/Medical%20App/Onboadring/OnboardHome.dart';
 import 'package:getx_prectise/PageBinding/page1/HomeView.dart';
 import 'package:getx_prectise/PageBinding/page1/binding.dart';

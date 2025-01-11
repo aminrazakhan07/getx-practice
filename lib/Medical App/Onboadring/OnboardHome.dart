@@ -4,6 +4,7 @@ import 'package:getx_prectise/Medical%20App/Auth/LoginView.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/Indecator.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/Onboarding.dart';
+import 'package:getx_prectise/Medical%20App/Widgets/SnackBart.dart';
 
 class Onboardring extends StatefulWidget {
   const Onboardring({super.key});
@@ -17,6 +18,7 @@ class _OnboardringState extends State<Onboardring> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         body: Column(
           children: [
             SizedBox(
@@ -56,6 +58,10 @@ class _OnboardringState extends State<Onboardring> {
             onTap: () {
               ///
               Get.offAll(const LoginviewPage());
+              SnackbarHelper.showSnackbar(
+                title: 'Click',
+                message: 'Successfully',
+              );
             },
           ),
         ));

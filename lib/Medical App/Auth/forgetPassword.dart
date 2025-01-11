@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_prectise/CustomText/TextField.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
+import 'package:getx_prectise/Medical%20App/Widgets/SnackBart.dart';
 
 class ForgetpasswordScr extends StatelessWidget {
   const ForgetpasswordScr({super.key});
@@ -18,14 +19,18 @@ class ForgetpasswordScr extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CustomTextField(
-              lblText: 'email',
+              lblText: 'OTP',
+              hint: 'OTP',
               prefix: Icons.visibility_off,
             ),
             CustomButton(
               onTap: () {
-                Get.snackbar('Click', 'Successfully');
+                SnackbarHelper.showSnackbar(
+                  title: 'Currected',
+                  message: 'Successfully',
+                );
               },
-              lbl: 'Get Otp',
+              lbl: 'Otp Code',
             )
           ],
         ),

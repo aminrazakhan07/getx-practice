@@ -27,10 +27,12 @@ class CustomTextField extends StatelessWidget {
             controller: texController,
             obscureText: obscurs,
             decoration: InputDecoration(
-              label: Text(lblText),
-              labelStyle: TextStyle(color: Colors.blue),
+              label: Text(
+                lblText,
+              ),
+              labelStyle: TextStyle(color: Colors.blue, fontSize: 20),
               hintText: hint,
-              hintStyle: TextStyle(color: Colors.grey.shade600),
+              hintStyle: TextStyle(color: Colors.grey[300]),
               prefixIcon: Icon(prefix),
               prefixIconColor: Colors.blue,
               filled: true,

@@ -4,6 +4,7 @@ import 'package:getx_prectise/CustomText/TextField.dart';
 import 'package:getx_prectise/Medical%20App/Auth/SignUpView.dart';
 import 'package:getx_prectise/Medical%20App/Auth/forgetPassword.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/CustomButton.dart';
+import 'package:getx_prectise/Medical%20App/Widgets/SnackBart.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/alreadyHaveAcc.dart';
 import 'package:getx_prectise/Medical%20App/Widgets/isDoctor.dart';
 
@@ -57,11 +58,10 @@ class LoginviewPage extends StatelessWidget {
                 child: InkWell(
                   onTap: () {
                     Get.to(ForgetpasswordScr());
-                    ////
-                    Get.snackbar(
-                      'Forget Password',
-                      'Successfully',
-                      snackPosition: SnackPosition.BOTTOM,
+                    /////
+                    SnackbarHelper.showSnackbar(
+                      title: 'Enter the OTP',
+                      message: 'Successfully',
                     );
                   },
                   child: Text(
@@ -75,10 +75,9 @@ class LoginviewPage extends StatelessWidget {
             CustomButton(
               onTap: () {
                 ///
-                Get.snackbar(
-                  'Log in',
-                  'Successfully',
-                  snackPosition: SnackPosition.BOTTOM,
+                SnackbarHelper.showSnackbar(
+                  title: 'Log in',
+                  message: 'Successfully',
                 );
               },
               lbl: 'Login ',
@@ -86,15 +85,18 @@ class LoginviewPage extends StatelessWidget {
             ////
             AlreadyAccountCheck(
               comment: "Don't have account?",
-              goToPage: ' Sign Up',
+              goToPage: 'Sig Up',
               onTap: () {
                 //
 
                 Get.offAll(SignUpScreen());
 
                 ///
-                Get.snackbar('Log in Page', 'Successfully',
-                    snackPosition: SnackPosition.BOTTOM);
+                SnackbarHelper.showSnackbar(
+                  title: 'Sign Up page',
+                  message: 'Successfully',
+                );
+                // Get.snackbar('Sign in', 'message');
               },
             ),
             ////

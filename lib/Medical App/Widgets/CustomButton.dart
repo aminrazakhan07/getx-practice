@@ -6,7 +6,7 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onTap;
   const CustomButton({
     super.key,
-    this.lbl = 'Sign Up',
+    required this.lbl,
     required this.onTap,
   });
 
@@ -35,35 +35,3 @@ class CustomButton extends StatelessWidget {
 }
 
 ////
-
-class CustomSnackbar extends StatelessWidget {
-  final String title;
-  final String message;
-
-  const CustomSnackbar({
-    super.key,
-    required this.title,
-    required this.message,
-  });
-
-  void showSnackbar() {
-    Get.snackbar(
-      title,
-      message,
-      snackPosition: SnackPosition.BOTTOM,
-      // duration: Duration(seconds: 2),
-      // backgroundColor: Colors.green,
-      // colorText: Colors.white,
-      // margin: EdgeInsets.all(10),
-      // borderRadius: 10,
-      // isDismissible: true,
-      // dismissDirection: DismissDirection.horizontal,
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}
