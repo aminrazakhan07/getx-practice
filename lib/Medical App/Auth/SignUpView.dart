@@ -18,7 +18,7 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Sign Up'),
+        title: Text('Sign Up Page'),
       ),
       body: Center(
         child: Column(
