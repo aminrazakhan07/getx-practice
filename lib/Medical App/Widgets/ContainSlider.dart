@@ -68,7 +68,7 @@ class _ContainsliderState extends State<Containslider> {
   ///
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height * .3,
       width: double.infinity,
       child: Stack(
